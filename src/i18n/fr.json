@@ -1,5 +1,14 @@
 {
-  "meta": { "siteName": "BKJ service" },
+  "meta": {
+    "siteName": "BKJ service",
+    "description": "Traiteur pour mariages, anniversaires et fêtes. Buffets, menus sur mesure et yaourts artisanaux. Devis sur WhatsApp."
+  },
+  "common": {
+    "skipToContent": "Aller au contenu",
+    "language": "Langue",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
   "nav": {
     "home": "Accueil",
     "services": "Services traiteur",
@@ -11,6 +20,18 @@
     "faq": "FAQ",
     "about": "À propos",
     "contact": "Contact"
+  },
+  "home": {
+    "heroTitle": "Mariages, fêtes et saveurs qui rassemblent",
+    "heroText": "Nous préparons vos buffets et vos menus avec soin, pour que vous profitiez de vos invités.",
+    "ctaQuote": "Demander un devis",
+    "ctaYogurts": "Commander des yaourts"
+  },
+  "footer": {
+    "tagline": "Traiteur d'événements et yaourts.",
+    "explore": "Explorer",
+    "info": "Informations",
+    "rights": "Tous droits réservés."
   },
   "network": {
     "offline": "Vous êtes hors connexion",

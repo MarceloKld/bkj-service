@@ -1,5 +1,14 @@
 {
-  "meta": { "siteName": "BKJ service" },
+  "meta": {
+    "siteName": "BKJ service",
+    "description": "Catering for weddings, birthdays and celebrations. Buffets, tailored menus and homemade yogurts. Get a quote on WhatsApp."
+  },
+  "common": {
+    "skipToContent": "Skip to content",
+    "language": "Language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
   "nav": {
     "home": "Home",
     "services": "Catering services",
@@ -11,6 +20,18 @@
     "faq": "FAQ",
     "about": "About",
     "contact": "Contact"
+  },
+  "home": {
+    "heroTitle": "Weddings, parties and flavors that bring people together",
+    "heroText": "We prepare your buffets and menus with care, so you can enjoy your guests.",
+    "ctaQuote": "Request a quote",
+    "ctaYogurts": "Order yogurts"
+  },
+  "footer": {
+    "tagline": "Event catering and yogurts.",
+    "explore": "Explore",
+    "info": "Information",
+    "rights": "All rights reserved."
   },
   "network": {
     "offline": "You are offline",
