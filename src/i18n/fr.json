@@ -1,0 +1,23 @@
+{
+  "meta": { "siteName": "BKJ service" },
+  "nav": {
+    "home": "Accueil",
+    "services": "Services traiteur",
+    "menus": "Menus et formules",
+    "yogurts": "Yaourts",
+    "gallery": "Galerie",
+    "quote": "Demander un devis",
+    "reviews": "Avis",
+    "faq": "FAQ",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "network": {
+    "offline": "Vous êtes hors connexion",
+    "online": "Connexion rétablie"
+  },
+  "legal": {
+    "terms": "Conditions générales",
+    "privacy": "Politique de confidentialité"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "meta": { "siteName": "BKJ service" },
+  "nav": {
+    "home": "Home",
+    "services": "Catering services",
+    "menus": "Menus and packages",
+    "yogurts": "Yogurts",
+    "gallery": "Gallery",
+    "quote": "Request a quote",
+    "reviews": "Reviews",
+    "faq": "FAQ",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "network": {
+    "offline": "You are offline",
+    "online": "Back online"
+  },
+  "legal": {
+    "terms": "Terms and conditions",
+    "privacy": "Privacy policy"
+  }
+}
