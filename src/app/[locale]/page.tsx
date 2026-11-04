@@ -14,7 +14,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const slides = heroImages.map((src, i) => ({ src, alt: dict.home.heroAlts[i] }));
 
   return (
-    <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-12 lg:grid-cols-2 lg:gap-14 lg:py-20">
+    <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-8 lg:grid-cols-2 lg:gap-14 lg:py-12">
       <div>
         <h1 className="font-display text-4xl font-bold leading-[1.1] sm:text-6xl">
           {dict.home.heroPrefix}
@@ -32,9 +32,20 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             {dict.home.ctaYogurts}
           </Link>
         </div>
+
+        <ul className="mt-10 grid max-w-md grid-cols-3 gap-4 border-t border-line pt-6">
+          {dict.home.statsValues.map((value, i) => (
+            <li key={value}>
+              <span className="block font-display text-3xl font-bold text-primary">{value}</span>
+              <span className="block text-sm text-muted">{dict.home.statsLabels[i]}</span>
+            </li>
+          ))}
+        </ul>
       </div>
 
-      <HeroAlbum slides={slides} label={dict.home.albumLabel} photoOf={dict.home.photoOf} />
+      <div className="lg:[&_.aspect-\[4\/5\]]:aspect-[5/6]">
+        <HeroAlbum slides={slides} label={dict.home.albumLabel} photoOf={dict.home.photoOf} />
+      </div>
     </section>
   );
 }

@@ -7,20 +7,37 @@ type Props = {
   typeSpeed?: number;
   deleteSpeed?: number;
   pause?: number;
+  startTyping?: boolean;
+  startDelay?: number;
 };
 
-export default function TypedText({ words, typeSpeed = 80, deleteSpeed = 45, pause = 1800 }: Props) {
+type Phase = "wait" | "hold" | "deleting" | "typing";
+
+export default function TypedText({
+  words,
+  typeSpeed = 80,
+  deleteSpeed = 45,
+  pause = 1800,
+  startTyping = false,
+  startDelay = 0,
+}: Props) {
   const [index, setIndex] = useState(0);
-  const [text, setText] = useState(words[0] ?? "");
-  const [phase, setPhase] = useState<"hold" | "deleting" | "typing">("hold");
+  const [text, setText] = useState(startTyping ? "" : (words[0] ?? ""));
+  const [phase, setPhase] = useState<Phase>(startTyping ? "wait" : "hold");
 
   useEffect(() => {
-    if (words.length < 2) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (words.length === 0) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      if (text === "") setText(words[0]);
+      return;
+    }
+    if (words.length < 2 && !startTyping) return;
 
     let timer: ReturnType<typeof setTimeout>;
 
-    if (phase === "hold") {
+    if (phase === "wait") {
+      timer = setTimeout(() => setPhase("typing"), startDelay);
+    } else if (phase === "hold") {
       timer = setTimeout(() => setPhase("deleting"), pause);
     } else if (phase === "deleting") {
       if (text.length > 0) {
@@ -41,7 +58,7 @@ export default function TypedText({ words, typeSpeed = 80, deleteSpeed = 45, pau
     }
 
     return () => clearTimeout(timer);
-  }, [phase, text, index, words, typeSpeed, deleteSpeed, pause]);
+  }, [phase, text, index, words, typeSpeed, deleteSpeed, pause, startTyping, startDelay]);
 
   return (
     <span>

@@ -21,12 +21,14 @@
     "about": "About",
     "contact": "Contact"
   },
-  "home": {
+   "home": {
     "heroPrefix": "The caterer for your",
     "heroWords": ["weddings", "birthdays", "baptisms", "family parties", "ceremonies"],
     "heroText": "We prepare your buffets and menus with care, so you can enjoy your guests.",
     "ctaQuote": "Request a quote",
     "ctaYogurts": "Order yogurts",
+    "statsValues": ["100+", "3,000+", "5 years"],
+    "statsLabels": ["events delivered", "guests served", "of experience"],
     "albumLabel": "Photos of our work",
     "photoOf": "Photo {n} of {total}",
     "heroAlts": [
@@ -45,12 +47,23 @@
     "offline": "You are offline",
     "online": "Back online"
   },
-  "whatsapp": {
-    "label": "Message BKJ service on WhatsApp",
-    "message": "Hello BKJ service, I would like some information."
+  "floating": {
+    "label": "Request a quote",
+    "close": "Close message",
+    "phrases": [
+      "Planning an event?",
+      "Tell us the date, we'll handle the rest.",
+      "Request your quote in 3 steps.",
+      "Wedding, birthday, baptism: we reply on WhatsApp."
+    ]
   },
   "legal": {
     "terms": "Terms and conditions",
     "privacy": "Privacy policy"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "This page doesn't exist yet or has been moved.",
+    "back": "Back to home"
   }
 }

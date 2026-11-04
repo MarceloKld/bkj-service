@@ -6,6 +6,7 @@ import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Splash from "@/components/layout/Splash";
 import NetworkStatus from "@/components/network/NetworkStatus";
 import "../globals.css";
 
@@ -13,6 +14,8 @@ const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", dis
 const figtree = Figtree({ subsets: ["latin"], variable: "--font-figtree", display: "swap" });
 
 type Params = { params: Promise<{ locale: string }> };
+
+const splashScript = `try{if(sessionStorage.getItem("bkj-splash")){document.documentElement.classList.add("no-splash")}else{sessionStorage.setItem("bkj-splash","1")}}catch(e){}`;
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -50,8 +53,10 @@ export default async function LocaleLayout({
   const dict = getDictionary(locale);
 
   return (
-    <html lang={locale} className={`${fraunces.variable} ${figtree.variable}`}>
+    <html lang={locale} className={`${fraunces.variable} ${figtree.variable}`} suppressHydrationWarning>
       <body>
+        <script dangerouslySetInnerHTML={{ __html: splashScript }} />
+        <Splash tagline={dict.footer.tagline} />
         <a href="#main" className="skip-link">
           {dict.common.skipToContent}
         </a>

@@ -3,7 +3,7 @@ import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import Logo from "./Logo";
 import CurrentYear from "./CurrentYear";
-import WhatsAppButton from "./WhatsAppButton";
+import FloatingQuote from "./FloatingQuote";
 
 type Props = { locale: Locale; dict: Dictionary };
 
@@ -56,7 +56,7 @@ export default function Footer({ locale, dict }: Props) {
       <p className="border-t border-line px-5 py-5 text-center text-sm text-muted">
         © <CurrentYear /> {dict.meta.siteName}. {dict.footer.rights}
       </p>
-      <WhatsAppButton label={dict.whatsapp.label} message={dict.whatsapp.message} />
+      <FloatingQuote href={`/${locale}/devis`} label={dict.floating.label} closeLabel={dict.floating.close} phrases={dict.floating.phrases} />
     </footer>
   );
 }

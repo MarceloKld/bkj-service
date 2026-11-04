@@ -21,12 +21,14 @@
     "about": "À propos",
     "contact": "Contact"
   },
-  "home": {
+   "home": {
     "heroPrefix": "Le traiteur de vos",
     "heroWords": ["mariages", "anniversaires", "baptêmes", "fêtes de famille", "cérémonies"],
     "heroText": "Nous préparons vos buffets et vos menus avec soin, pour que vous profitiez de vos invités.",
     "ctaQuote": "Demander un devis",
     "ctaYogurts": "Commander des yaourts",
+    "statsValues": ["100+", "3 000+", "5 ans"],
+    "statsLabels": ["événements réalisés", "invités servis", "d'expérience"],
     "albumLabel": "Photos de nos réalisations",
     "photoOf": "Photo {n} sur {total}",
     "heroAlts": [
@@ -45,12 +47,23 @@
     "offline": "Vous êtes hors connexion",
     "online": "Connexion rétablie"
   },
-  "whatsapp": {
-    "label": "Écrire à BKJ service sur WhatsApp",
-    "message": "Bonjour BKJ service, je souhaite avoir des informations."
+  "floating": {
+    "label": "Demander un devis",
+    "close": "Fermer le message",
+    "phrases": [
+      "Un événement à préparer ?",
+      "Dites-nous la date, on s'occupe du reste.",
+      "Demandez votre devis en 3 étapes.",
+      "Mariage, anniversaire, baptême : on vous répond sur WhatsApp."
+    ]
   },
   "legal": {
     "terms": "Conditions générales",
     "privacy": "Politique de confidentialité"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "text": "Cette page n'existe pas encore ou a été déplacée.",
+    "back": "Retour à l'accueil"
   }
 }
