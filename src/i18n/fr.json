@@ -22,10 +22,18 @@
     "contact": "Contact"
   },
   "home": {
-    "heroTitle": "Mariages, fêtes et saveurs qui rassemblent",
+    "heroPrefix": "Le traiteur de vos",
+    "heroWords": ["mariages", "anniversaires", "baptêmes", "fêtes de famille", "cérémonies"],
     "heroText": "Nous préparons vos buffets et vos menus avec soin, pour que vous profitiez de vos invités.",
     "ctaQuote": "Demander un devis",
-    "ctaYogurts": "Commander des yaourts"
+    "ctaYogurts": "Commander des yaourts",
+    "albumLabel": "Photos de nos réalisations",
+    "photoOf": "Photo {n} sur {total}",
+    "heroAlts": [
+      "Buffet de mariage dressé par BKJ service",
+      "Table d'anniversaire avec gâteau et décoration",
+      "Plats vedettes préparés pour une fête de famille"
+    ]
   },
   "footer": {
     "tagline": "Traiteur d'événements et yaourts.",
@@ -36,6 +44,10 @@
   "network": {
     "offline": "Vous êtes hors connexion",
     "online": "Connexion rétablie"
+  },
+  "whatsapp": {
+    "label": "Écrire à BKJ service sur WhatsApp",
+    "message": "Bonjour BKJ service, je souhaite avoir des informations."
   },
   "legal": {
     "terms": "Conditions générales",

@@ -22,10 +22,18 @@
     "contact": "Contact"
   },
   "home": {
-    "heroTitle": "Weddings, parties and flavors that bring people together",
+    "heroPrefix": "The caterer for your",
+    "heroWords": ["weddings", "birthdays", "baptisms", "family parties", "ceremonies"],
     "heroText": "We prepare your buffets and menus with care, so you can enjoy your guests.",
     "ctaQuote": "Request a quote",
-    "ctaYogurts": "Order yogurts"
+    "ctaYogurts": "Order yogurts",
+    "albumLabel": "Photos of our work",
+    "photoOf": "Photo {n} of {total}",
+    "heroAlts": [
+      "Wedding buffet set up by BKJ service",
+      "Birthday table with cake and decoration",
+      "Signature dishes prepared for a family celebration"
+    ]
   },
   "footer": {
     "tagline": "Event catering and yogurts.",
@@ -36,6 +44,10 @@
   "network": {
     "offline": "You are offline",
     "online": "Back online"
+  },
+  "whatsapp": {
+    "label": "Message BKJ service on WhatsApp",
+    "message": "Hello BKJ service, I would like some information."
   },
   "legal": {
     "terms": "Terms and conditions",

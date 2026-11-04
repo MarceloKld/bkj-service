@@ -72,6 +72,7 @@ textarea {
   border-radius: 4px;
 }
 
+@layer components {
 .btn {
   display: inline-flex;
   align-items: center;
@@ -104,6 +105,7 @@ textarea {
   .btn:hover {
     filter: brightness(1.08);
   }
+}
 }
 
 .skip-link {
@@ -143,5 +145,26 @@ textarea {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.typed-caret {
+  display: inline-block;
+  width: 3px;
+  height: 0.85em;
+  margin-left: 4px;
+  background: var(--primary);
+  vertical-align: -0.05em;
+  animation: blink 1s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typed-caret {
+    animation: none;
   }
 }

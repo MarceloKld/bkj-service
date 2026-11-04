@@ -2,12 +2,12 @@ import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import Logo from "./Logo";
+import CurrentYear from "./CurrentYear";
+import WhatsAppButton from "./WhatsAppButton";
 
 type Props = { locale: Locale; dict: Dictionary };
 
 export default function Footer({ locale, dict }: Props) {
-  const year = new Date().getFullYear();
-
   const explore = [
     { href: "/services", label: dict.nav.services },
     { href: "/menus", label: dict.nav.menus },
@@ -54,8 +54,9 @@ export default function Footer({ locale, dict }: Props) {
         {column(dict.footer.info, info)}
       </div>
       <p className="border-t border-line px-5 py-5 text-center text-sm text-muted">
-        © {year} {dict.meta.siteName}. {dict.footer.rights}
+        © <CurrentYear /> {dict.meta.siteName}. {dict.footer.rights}
       </p>
+      <WhatsAppButton label={dict.whatsapp.label} message={dict.whatsapp.message} />
     </footer>
   );
 }
