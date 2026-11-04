@@ -77,5 +77,19 @@
     ],
     "learnMore": "Découvrir",
     "allServices": "Voir tous les services"
+  },
+  "servicesPage": {
+    "title": "Nos services traiteur",
+    "intro": "Mariages, anniversaires, fêtes de famille ou événements d'entreprise : choisissez votre occasion, nous préparons le reste.",
+    "jumpLabel": "Aller directement à",
+    "variantsTitle": "Selon votre événement",
+    "guestsLabel": "Invités conseillés",
+    "includesTitle": "Ce qui est inclus",
+    "optionsTitle": "Options",
+    "flowTitle": "Déroulé type",
+    "quoteCta": "Demander un devis",
+    "quoteVariant": "Demander un devis pour",
+    "closingTitle": "Votre événement ne rentre dans aucune case ?",
+    "closingText": "Décrivez-nous votre projet : nous le composons sur mesure."
   }
 }

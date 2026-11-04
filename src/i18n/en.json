@@ -77,5 +77,19 @@
     ],
     "learnMore": "Discover",
     "allServices": "See all services"
+  },
+  "servicesPage": {
+    "title": "Our catering services",
+    "intro": "Weddings, birthdays, family parties or corporate events: pick your occasion and we take care of the rest.",
+    "jumpLabel": "Jump to",
+    "variantsTitle": "Depending on your event",
+    "guestsLabel": "Suggested guests",
+    "includesTitle": "What is included",
+    "optionsTitle": "Options",
+    "flowTitle": "Typical schedule",
+    "quoteCta": "Request a quote",
+    "quoteVariant": "Request a quote for",
+    "closingTitle": "Your event doesn't fit any box?",
+    "closingText": "Describe your project and we will build it to measure."
   }
 }
