@@ -15,7 +15,11 @@ const figtree = Figtree({ subsets: ["latin"], variable: "--font-figtree", displa
 
 type Params = { params: Promise<{ locale: string }> };
 
-const splashScript = `try{if(sessionStorage.getItem("bkj-splash")){document.documentElement.classList.add("no-splash")}else{sessionStorage.setItem("bkj-splash","1")}}catch(e){}`;
+// false : l'ecran d'accueil s'affiche a chaque chargement de la page d'accueil
+// true  : une seule fois par visite (par onglet)
+const SPLASH_ONCE_PER_SESSION = false;
+
+const splashScript = `try{var home=new RegExp("^/(${locales.join("|")})/?$").test(location.pathname);var seen=${SPLASH_ONCE_PER_SESSION}&&sessionStorage.getItem("bkj-splash");if(!home||seen){document.documentElement.classList.add("no-splash")}else if(${SPLASH_ONCE_PER_SESSION}){sessionStorage.setItem("bkj-splash","1")}}catch(e){}`;
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -68,3 +72,5 @@ export default async function LocaleLayout({
     </html>
   );
 }
+
+export const instant = false;

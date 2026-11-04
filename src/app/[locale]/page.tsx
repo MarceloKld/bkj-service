@@ -11,7 +11,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   if (!isLocale(locale)) notFound();
   const dict = getDictionary(locale);
 
-  const slides = heroImages.map((src, i) => ({ src, alt: dict.home.heroAlts[i] }));
+  const slides = heroImages.map((src, i) => ({ src, alt: dict.home.heroAlts[i] ?? dict.home.albumLabel }));
 
   return (
     <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-8 lg:grid-cols-2 lg:gap-14 lg:py-12">
@@ -49,3 +49,4 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     </section>
   );
 }
+export const instant = false;
