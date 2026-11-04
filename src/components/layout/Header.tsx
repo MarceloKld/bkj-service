@@ -46,7 +46,7 @@ export default function Header({ locale, dict }: Props) {
               key={l.href}
               href={`/${locale}${l.href}`}
               aria-current={isActive(l.href) ? "page" : undefined}
-              className={`text-[15px] font-medium transition-colors ${
+              className={`link-underline pb-1 text-[15px] font-medium transition-colors ${
                 isActive(l.href) ? "text-primary" : "text-ink hover:text-primary"
               }`}
             >

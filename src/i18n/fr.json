@@ -65,5 +65,17 @@
     "title": "Page introuvable",
     "text": "Cette page n'existe pas encore ou a été déplacée.",
     "back": "Retour à l'accueil"
+  },
+  "sections": {
+    "servicesTitle": "Un service pour chaque occasion",
+    "servicesIntro": "Du grand mariage à l'anniversaire entre proches, nous composons le menu, le service et la mise en place avec vous.",
+    "servicesTitles": ["Mariages", "Anniversaires", "Fêtes et cérémonies"],
+    "servicesTexts": [
+      "Civil, coutumier ou religieux : un buffet à la hauteur du grand jour, pensé avec vous.",
+      "Pour petits et grands : buffet, gâteau et décoration de table.",
+      "Baptêmes, retrouvailles, séminaires, inaugurations : on s'adapte à votre événement."
+    ],
+    "learnMore": "Découvrir",
+    "allServices": "Voir tous les services"
   }
 }

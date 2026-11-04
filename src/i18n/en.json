@@ -65,5 +65,17 @@
     "title": "Page not found",
     "text": "This page doesn't exist yet or has been moved.",
     "back": "Back to home"
+  },
+  "sections": {
+    "servicesTitle": "A service for every occasion",
+    "servicesIntro": "From a grand wedding to an intimate birthday, we build the menu, the service and the setup together with you.",
+    "servicesTitles": ["Weddings", "Birthdays", "Parties and ceremonies"],
+    "servicesTexts": [
+      "Civil, traditional or religious: a buffet worthy of the big day, designed with you.",
+      "For kids and adults: buffet, cake and table decoration.",
+      "Baptisms, reunions, seminars, openings: we adapt to your event."
+    ],
+    "learnMore": "Discover",
+    "allServices": "See all services"
   }
 }

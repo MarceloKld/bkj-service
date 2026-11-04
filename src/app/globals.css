@@ -301,3 +301,48 @@ textarea {
 .bubble-in {
   transform-origin: bottom right;
 }
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.page-enter {
+  animation: page-in 0.35s var(--ease-out) both;
+}
+
+.card-lift {
+  transition:
+    transform 0.25s var(--ease-out),
+    border-color 0.25s var(--ease-out);
+}
+
+.arrow-slide {
+  transition: transform 0.25s var(--ease-out);
+}
+
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  transition: background-size 0.3s var(--ease-out);
+}
+
+@media (hover: hover) {
+  .card-lift:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+  }
+  .card-lift:hover .arrow-slide {
+    transform: translateX(4px);
+  }
+  .link-underline:hover {
+    background-size: 100% 1px;
+  }
+}
