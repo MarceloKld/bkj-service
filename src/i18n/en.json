@@ -91,5 +91,33 @@
     "quoteVariant": "Request a quote for",
     "closingTitle": "Your event doesn't fit any box?",
     "closingText": "Describe your project and we will build it to measure."
+  },
+  "menusPage": {
+    "title": "Menus and packages",
+    "intro": "Three packages to start with, which we adapt to your event, your tastes and your guests.",
+    "pricingTitle": "Tailor-made pricing",
+    "pricingNote": "Every event is different: number of guests, venue, date, menu and type of service. We prepare a personalized quote and discuss it together on WhatsApp.",
+    "filterEvent": "Event type",
+    "filterStyle": "Service type",
+    "all": "All",
+    "resultCount": "{n} package(s) shown",
+    "noResult": "No package matches these filters. Try others, or request a tailor-made quote.",
+    "includesTitle": "Included",
+    "exampleTitle": "Sample menu",
+    "guestsLabel": "Guests",
+    "idealFor": "Ideal for",
+    "onQuote": "On quote",
+    "fromPrice": "From",
+    "perGuest": "per guest",
+    "quoteCta": "Request a quote",
+    "share": "Share this menu",
+    "shareMessage": "Check out the {name} package from BKJ service:",
+    "extrasTitle": "A la carte",
+    "extrasIntro": "Add what you need to any package.",
+    "dietsTitle": "Diets and allergies",
+    "dietsText": "Vegetarian, pork-free or any other restriction: mention it in your request and we adapt the menu. Please also tell us about your guests' allergies, it matters for their safety.",
+    "stepsTitle": "How to book",
+    "closingTitle": "Ready to build your menu?",
+    "closingText": "Tell us the date and the number of guests: we get back to you on WhatsApp."
   }
 }

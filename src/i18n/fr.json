@@ -91,5 +91,33 @@
     "quoteVariant": "Demander un devis pour",
     "closingTitle": "Votre événement ne rentre dans aucune case ?",
     "closingText": "Décrivez-nous votre projet : nous le composons sur mesure."
+  },
+  "menusPage": {
+    "title": "Menus et formules",
+    "intro": "Trois formules pour commencer, que nous adaptons à votre événement, à vos goûts et à vos invités.",
+    "pricingTitle": "Des tarifs sur mesure",
+    "pricingNote": "Chaque événement est différent : nombre d'invités, lieu, date, menu et type de service. Nous établissons un devis personnalisé et nous en discutons ensemble sur WhatsApp.",
+    "filterEvent": "Type d'événement",
+    "filterStyle": "Type de service",
+    "all": "Tous",
+    "resultCount": "{n} formule(s) affichée(s)",
+    "noResult": "Aucune formule ne correspond à ces filtres. Essayez-en d'autres, ou demandez un devis sur mesure.",
+    "includesTitle": "Inclus",
+    "exampleTitle": "Exemple de menu",
+    "guestsLabel": "Invités",
+    "idealFor": "Idéal pour",
+    "onQuote": "Sur devis",
+    "fromPrice": "À partir de",
+    "perGuest": "par personne",
+    "quoteCta": "Demander un devis",
+    "share": "Partager ce menu",
+    "shareMessage": "Découvre la formule {name} de BKJ service :",
+    "extrasTitle": "À la carte",
+    "extrasIntro": "Ajoutez ce dont vous avez besoin à n'importe quelle formule.",
+    "dietsTitle": "Régimes et allergies",
+    "dietsText": "Végétarien, sans porc ou autre restriction : indiquez-le dans votre demande et nous adaptons le menu. Précisez aussi les allergies de vos invités, c'est important pour leur sécurité.",
+    "stepsTitle": "Comment réserver",
+    "closingTitle": "Prêt à composer votre menu ?",
+    "closingText": "Dites-nous la date et le nombre d'invités : nous revenons vers vous sur WhatsApp."
   }
 }
