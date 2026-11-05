@@ -158,5 +158,33 @@
     "closingTitle": "Un événement ? Pensez aux pots individuels.",
     "closingText": "Anniversaire, mariage, séminaire : nous préparons de grandes quantités sur demande.",
     "closingCta": "Demander un devis"
+  },
+  "contactPage": {
+    "title": "Contact",
+    "intro": "Un seul canal pour tout : WhatsApp, où nous sommes disponibles à toute heure.",
+    "whatsappTitle": "WhatsApp",
+    "whatsappCta": "Écrire sur WhatsApp",
+    "copy": "Copier le numéro",
+    "copied": "Numéro copié",
+    "onlyWhatsapp": "Pour vous répondre au plus vite, nous sommes joignables uniquement sur WhatsApp.",
+    "availabilityTitle": "Disponibilité",
+    "availability": "24 h/24, 7 j/7",
+    "availabilityShort": "24 h/24, 7 j/7",
+    "addressTitle": "Adresse",
+    "mapLink": "Voir sur la carte",
+    "topicsTitle": "De quoi voulez-vous parler ?",
+    "topicWedding": "Un mariage",
+    "topicBirthday": "Un anniversaire",
+    "topicEvent": "Une fête ou un événement",
+    "topicYogurts": "Des yaourts",
+    "topicOther": "Une autre question",
+    "msgGeneric": "Bonjour BKJ service, j'ai une question.",
+    "msgWedding": "Bonjour BKJ service, je prépare un mariage et j'aimerais en discuter.",
+    "msgBirthday": "Bonjour BKJ service, je prépare un anniversaire et j'aimerais en discuter.",
+    "msgEvent": "Bonjour BKJ service, je prépare une fête et j'aimerais en discuter.",
+    "msgYogurts": "Bonjour BKJ service, je souhaite des informations sur vos yaourts.",
+    "quoteTitle": "Pour un devis détaillé",
+    "quoteText": "Le formulaire en trois étapes prépare votre message : vous n'avez qu'à l'envoyer.",
+    "quoteCta": "Demander un devis"
   }
 }

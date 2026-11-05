@@ -158,5 +158,33 @@
     "closingTitle": "An event? Think individual cups.",
     "closingText": "Birthday, wedding, seminar: we prepare large quantities on request.",
     "closingCta": "Request a quote"
+  },
+  "contactPage": {
+    "title": "Contact",
+    "intro": "One channel for everything: WhatsApp, where we are available at any hour.",
+    "whatsappTitle": "WhatsApp",
+    "whatsappCta": "Message us on WhatsApp",
+    "copy": "Copy number",
+    "copied": "Number copied",
+    "onlyWhatsapp": "To reply as quickly as possible, we can only be reached on WhatsApp.",
+    "availabilityTitle": "Availability",
+    "availability": "24 hours a day, 7 days a week",
+    "availabilityShort": "24/7",
+    "addressTitle": "Address",
+    "mapLink": "View on the map",
+    "topicsTitle": "What would you like to talk about?",
+    "topicWedding": "A wedding",
+    "topicBirthday": "A birthday",
+    "topicEvent": "A party or an event",
+    "topicYogurts": "Yogurts",
+    "topicOther": "Another question",
+    "msgGeneric": "Hello BKJ service, I have a question.",
+    "msgWedding": "Hello BKJ service, I am planning a wedding and would like to discuss it.",
+    "msgBirthday": "Hello BKJ service, I am planning a birthday and would like to discuss it.",
+    "msgEvent": "Hello BKJ service, I am planning a party and would like to discuss it.",
+    "msgYogurts": "Hello BKJ service, I would like information about your yogurts.",
+    "quoteTitle": "For a detailed quote",
+    "quoteText": "The three-step form prepares your message: you just have to send it.",
+    "quoteCta": "Request a quote"
   }
 }
