@@ -22,7 +22,7 @@ export default async function YogurtsPage({ params }: Props) {
   if (!isLocale(locale)) notFound();
   const dict = getDictionary(locale);
   const t = dict.yogurtsPage;
-  const { products, gallery } = getYogurts(locale);
+  const { products, featured, gallery } = getYogurts(locale);
 
   const details = [
     { label: t.pickupPlaceLabel, value: yogurtConfig.pickupPlace },
@@ -32,9 +32,30 @@ export default async function YogurtsPage({ params }: Props) {
 
   return (
     <>
-      <header className="mx-auto max-w-6xl px-5 pb-8 pt-12 lg:pt-16">
-        <h1 className="max-w-3xl font-display text-4xl font-bold leading-[1.1] sm:text-6xl">{t.title}</h1>
-        <p className="mt-4 max-w-2xl text-lg text-muted">{t.intro}</p>
+      <header className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-12 pt-12 lg:grid-cols-[1.1fr_1fr] lg:pt-16">
+        <div>
+          <h1 className="font-display text-4xl font-bold leading-[1.1] sm:text-6xl">{t.title}</h1>
+          <p className="mt-4 max-w-lg text-lg text-muted">{t.intro}</p>
+        </div>
+        <ul className="grid max-w-md grid-cols-2 gap-3">
+          {featured.map((f, i) => (
+            <li
+              key={f.src}
+              className={`fade-up relative aspect-[5/6] overflow-hidden rounded-2xl border border-line bg-surface ${
+                i === 1 ? "mt-8" : ""
+              }`}
+            >
+              <Image
+                src={f.src}
+                alt={f.alt}
+                fill
+                sizes="(min-width: 1024px) 220px, 45vw"
+                loading={i === 0 ? "eager" : undefined}
+                className="object-cover"
+              />
+            </li>
+          ))}
+        </ul>
       </header>
 
       <section className="mx-auto max-w-6xl px-5 pb-16">

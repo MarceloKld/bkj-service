@@ -1,12 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Minus, Plus } from "lucide-react";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { formatFc, type Product } from "@/data/yogurts";
 import { whatsappLink } from "@/lib/whatsapp";
+import YogurtBottle from "@/components/icons/YogurtBottle";
 
 type Props = {
   locale: string;
@@ -34,7 +34,7 @@ export default function YogurtOrder({ locale, products, t, minUnits }: Props) {
 
   const lines = chosen.map((p) => {
     const n = qty[p.id] ?? 0;
-    return `- ${n} x ${p.name} ${p.size} (${formatFc(p.priceFc)}) = ${formatFc(p.priceFc * n)}`;
+    return `- ${n} x ${p.size} (${formatFc(p.priceFc)}) = ${formatFc(p.priceFc * n)}`;
   });
   const message = [
     t.msgHello,
@@ -57,56 +57,44 @@ export default function YogurtOrder({ locale, products, t, minUnits }: Props) {
 
   return (
     <div className="grid gap-10 lg:grid-cols-[1fr_22rem] lg:gap-14">
-      <ul className="space-y-10">
+      <ul className="divide-y divide-line border-y border-line">
         {products.map((p) => {
           const n = qty[p.id] ?? 0;
           return (
-            <li key={p.id} className="grid gap-6 sm:grid-cols-[minmax(0,15rem)_1fr]">
-              <div className="relative aspect-[5/6] overflow-hidden rounded-2xl border border-line bg-surface">
-                <Image
-                  src={p.image}
-                  alt={p.imageAlt}
-                  fill
-                  sizes="(min-width: 640px) 240px, 100vw"
-                  className="object-cover"
-                />
+            <li key={p.id} className="flex flex-wrap items-center gap-x-5 gap-y-3 py-5">
+              <div className="grid h-20 w-12 shrink-0 place-items-end justify-items-center">
+                <YogurtBottle level={p.level} />
               </div>
-              <div className="flex flex-col">
-                <p className="text-sm font-semibold text-muted">
-                  {t.flavorLabel} : {p.flavor}
-                </p>
-                <h3 className="mt-1 font-display text-3xl font-bold">
-                  {p.name} <span className="text-muted">{p.size}</span>
-                </h3>
-                <p className="mt-3 max-w-sm text-muted">{p.text}</p>
-                <p className="mt-4 font-display text-3xl font-bold text-primary">{formatFc(p.priceFc)}</p>
 
-                <div
-                  role="group"
-                  aria-label={`${t.quantityOf} ${p.name} ${p.size}`}
-                  className="mt-auto flex items-center gap-2 pt-6"
+              <div className="min-w-[10rem] flex-1">
+                <h3 className="font-display text-2xl font-bold">{p.size}</h3>
+                <p className="font-display text-xl font-semibold text-primary">{formatFc(p.priceFc)}</p>
+                <p className="mt-1 text-sm text-muted">
+                  {t.flavorLabel} : {p.flavor}. {p.text}
+                </p>
+              </div>
+
+              <div role="group" aria-label={`${t.quantityOf} ${p.size}`} className="ml-auto flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setQuantity(p.id, n - 1)}
+                  disabled={n === 0}
+                  aria-label={`${t.decrease} (${p.size})`}
+                  className="grid h-11 w-11 place-items-center rounded-full border border-line transition-colors hover:border-primary disabled:opacity-40"
                 >
-                  <button
-                    type="button"
-                    onClick={() => setQuantity(p.id, n - 1)}
-                    disabled={n === 0}
-                    aria-label={t.decrease}
-                    className="grid h-11 w-11 place-items-center rounded-full border border-line transition-colors hover:border-primary disabled:opacity-40"
-                  >
-                    <Minus size={18} aria-hidden="true" />
-                  </button>
-                  <span aria-live="polite" className="w-12 text-center font-display text-2xl font-bold">
-                    {n}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => setQuantity(p.id, n + 1)}
-                    aria-label={t.increase}
-                    className="grid h-11 w-11 place-items-center rounded-full bg-primary text-on-primary transition-transform active:scale-95"
-                  >
-                    <Plus size={18} aria-hidden="true" />
-                  </button>
-                </div>
+                  <Minus size={18} aria-hidden="true" />
+                </button>
+                <span aria-live="polite" className="w-10 text-center font-display text-2xl font-bold">
+                  {n}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setQuantity(p.id, n + 1)}
+                  aria-label={`${t.increase} (${p.size})`}
+                  className="grid h-11 w-11 place-items-center rounded-full bg-primary text-on-primary transition-transform active:scale-95"
+                >
+                  <Plus size={18} aria-hidden="true" />
+                </button>
               </div>
             </li>
           );
@@ -123,7 +111,7 @@ export default function YogurtOrder({ locale, products, t, minUnits }: Props) {
             {chosen.map((p) => (
               <li key={p.id} className="flex justify-between gap-3">
                 <span>
-                  {qty[p.id]} x {p.name} {p.size}
+                  {qty[p.id]} x {p.size}
                 </span>
                 <span className="shrink-0 font-semibold">{formatFc(p.priceFc * (qty[p.id] ?? 0))}</span>
               </li>
