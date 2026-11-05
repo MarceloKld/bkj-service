@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePrefersReducedMotion } from "@/hooks/useBrowser";
 
 type Props = {
   words: string[];
@@ -21,16 +22,13 @@ export default function TypedText({
   startTyping = false,
   startDelay = 0,
 }: Props) {
+  const reduced = usePrefersReducedMotion();
   const [index, setIndex] = useState(0);
   const [text, setText] = useState(startTyping ? "" : (words[0] ?? ""));
   const [phase, setPhase] = useState<Phase>(startTyping ? "wait" : "hold");
 
   useEffect(() => {
-    if (words.length === 0) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      if (text === "") setText(words[0]);
-      return;
-    }
+    if (reduced || words.length === 0) return;
     if (words.length < 2 && !startTyping) return;
 
     let timer: ReturnType<typeof setTimeout>;
@@ -58,11 +56,11 @@ export default function TypedText({
     }
 
     return () => clearTimeout(timer);
-  }, [phase, text, index, words, typeSpeed, deleteSpeed, pause, startTyping, startDelay]);
+  }, [reduced, phase, text, index, words, typeSpeed, deleteSpeed, pause, startTyping, startDelay]);
 
   return (
     <span>
-      {text}
+      {reduced ? (words[0] ?? "") : text}
       <span className="typed-caret" aria-hidden="true" />
     </span>
   );

@@ -26,7 +26,7 @@ export default async function ContactPage({ params }: Props) {
   const t = dict.contactPage;
   const { business } = siteConfig;
 
-  const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(business.address)}`;
+  const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(business.mapQuery)}`;
 
   const topics = [
     { label: t.topicWedding, message: t.msgWedding },

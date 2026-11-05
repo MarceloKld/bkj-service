@@ -1,8 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Cake, Check, Heart, PartyPopper, Users } from "lucide-react";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import type { Service } from "@/data/services";
+import { getGallery, type GalleryItem } from "@/data/gallery";
 import Reveal from "@/components/motion/Reveal";
 
 type Props = { locale: Locale; dict: Dictionary; service: Service; index: number };
@@ -13,6 +15,11 @@ export default function ServiceSection({ locale, dict, service, index }: Props) 
   const t = dict.servicesPage;
   const Icon = icons[service.icon];
   const quoteHref = (type: string) => `/${locale}/devis?type=${type}`;
+
+  const gallery = getGallery(locale);
+  const photos = service.photos
+    .map((id) => gallery.find((g) => g.id === id))
+    .filter((g): g is GalleryItem => Boolean(g));
 
   return (
     <section id={service.slug} className="scroll-mt-24 border-t border-line py-14 lg:py-20">
@@ -33,6 +40,27 @@ export default function ServiceSection({ locale, dict, service, index }: Props) 
               {t.quoteCta}
             </Link>
           </div>
+
+          {photos.length > 0 && (
+            <ul data-reveal className="mt-8 grid max-w-md grid-cols-2 gap-3">
+              {photos.map((p, i) => (
+                <li
+                  key={p.id}
+                  className={`relative aspect-[4/5] overflow-hidden rounded-2xl border border-line bg-surface ${
+                    i === 1 ? "mt-6" : ""
+                  }`}
+                >
+                  <Image
+                    src={p.src}
+                    alt={p.alt}
+                    fill
+                    sizes="(min-width: 1024px) 220px, 45vw"
+                    className="object-cover"
+                  />
+                </li>
+              ))}
+            </ul>
+          )}
         </Reveal>
 
         <Reveal className="space-y-10" stagger={0.15}>

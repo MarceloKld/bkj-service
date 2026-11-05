@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useDocumentHidden, usePrefersReducedMotion } from "@/hooks/useBrowser";
 
 type Slide = { src: string; alt: string };
 type Props = { slides: Slide[]; label: string; photoOf: string; interval?: number };
@@ -9,21 +10,8 @@ type Props = { slides: Slide[]; label: string; photoOf: string; interval?: numbe
 export default function HeroAlbum({ slides, label, photoOf, interval = 3000 }: Props) {
   const [active, setActive] = useState(0);
   const [hovered, setHovered] = useState(false);
-  const [hidden, setHidden] = useState(false);
-  const [reduced, setReduced] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const onMotion = () => setReduced(mq.matches);
-    const onVisibility = () => setHidden(document.hidden);
-    onMotion();
-    mq.addEventListener("change", onMotion);
-    document.addEventListener("visibilitychange", onVisibility);
-    return () => {
-      mq.removeEventListener("change", onMotion);
-      document.removeEventListener("visibilitychange", onVisibility);
-    };
-  }, []);
+  const reduced = usePrefersReducedMotion();
+  const hidden = useDocumentHidden();
 
   useEffect(() => {
     if (reduced || hovered || hidden || slides.length < 2) return;

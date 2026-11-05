@@ -186,5 +186,35 @@
     "quoteTitle": "For a detailed quote",
     "quoteText": "The three-step form prepares your message: you just have to send it.",
     "quoteCta": "Request a quote"
+  },
+  "galleryPage": {
+    "title": "Gallery",
+    "intro": "A few moments from our receptions, buffets and yogurts.",
+    "filterLabel": "Category",
+    "filterAll": "All",
+    "catMariage": "Weddings",
+    "catAnniversaire": "Birthdays",
+    "catBuffets": "Buffets",
+    "catYaourts": "Yogurts",
+    "resultCount": "{n} photo(s) shown",
+    "dialogLabel": "Photo viewer",
+    "close": "Close",
+    "prev": "Previous photo",
+    "next": "Next photo",
+    "counter": "Photo {n} of {total}",
+    "closingTitle": "Your event could be the next one",
+    "closingText": "Tell us what you are planning: we reply on WhatsApp.",
+    "closingCta": "Request a quote"
+  },
+  "faqPage": {
+    "title": "Frequently asked questions",
+    "intro": "Answers to the questions we are asked most often.",
+    "stillTitle": "Another question?",
+    "stillText": "Message us on WhatsApp: we are available 24 hours a day, 7 days a week."
+  },
+  "homeGallery": {
+    "title": "Our work",
+    "intro": "Set tables, generous buffets and happy guests.",
+    "link": "See the whole gallery"
   }
 }

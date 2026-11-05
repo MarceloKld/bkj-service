@@ -2,37 +2,37 @@
 
 import { useEffect, useState } from "react";
 import { Wifi, WifiOff } from "lucide-react";
+import { useOnlineStatus } from "@/hooks/useBrowser";
 
 type Props = { labels: { offline: string; online: string } };
 
 export default function NetworkStatus({ labels }: Props) {
-  const [status, setStatus] = useState<"idle" | "offline" | "online">("idle");
+  const online = useOnlineStatus();
+  const [showBack, setShowBack] = useState(false);
 
   useEffect(() => {
     let timer: ReturnType<typeof setTimeout> | undefined;
 
-    const goOffline = () => {
+    const onOnline = () => {
+      setShowBack(true);
+      timer = setTimeout(() => setShowBack(false), 3500);
+    };
+    const onOffline = () => {
       if (timer) clearTimeout(timer);
-      setStatus("offline");
-    };
-    const goOnline = () => {
-      setStatus("online");
-      timer = setTimeout(() => setStatus("idle"), 3500);
+      setShowBack(false);
     };
 
-    if (!navigator.onLine) goOffline();
-    window.addEventListener("offline", goOffline);
-    window.addEventListener("online", goOnline);
-
+    window.addEventListener("online", onOnline);
+    window.addEventListener("offline", onOffline);
     return () => {
       if (timer) clearTimeout(timer);
-      window.removeEventListener("offline", goOffline);
-      window.removeEventListener("online", goOnline);
+      window.removeEventListener("online", onOnline);
+      window.removeEventListener("offline", onOffline);
     };
   }, []);
 
-  if (status === "idle") return null;
-  const isOffline = status === "offline";
+  if (online && !showBack) return null;
+  const isOffline = !online;
 
   return (
     <div

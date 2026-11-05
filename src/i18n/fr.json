@@ -186,5 +186,35 @@
     "quoteTitle": "Pour un devis détaillé",
     "quoteText": "Le formulaire en trois étapes prépare votre message : vous n'avez qu'à l'envoyer.",
     "quoteCta": "Demander un devis"
+  },
+  "galleryPage": {
+    "title": "Galerie",
+    "intro": "Quelques moments de nos réceptions, nos buffets et nos yaourts.",
+    "filterLabel": "Catégorie",
+    "filterAll": "Tout",
+    "catMariage": "Mariages",
+    "catAnniversaire": "Anniversaires",
+    "catBuffets": "Buffets",
+    "catYaourts": "Yaourts",
+    "resultCount": "{n} photo(s) affichée(s)",
+    "dialogLabel": "Visionneuse de photos",
+    "close": "Fermer",
+    "prev": "Photo précédente",
+    "next": "Photo suivante",
+    "counter": "Photo {n} sur {total}",
+    "closingTitle": "Votre événement sera le prochain",
+    "closingText": "Dites-nous ce que vous préparez : nous vous répondons sur WhatsApp.",
+    "closingCta": "Demander un devis"
+  },
+  "faqPage": {
+    "title": "Questions fréquentes",
+    "intro": "Les réponses aux questions qu'on nous pose le plus souvent.",
+    "stillTitle": "Une autre question ?",
+    "stillText": "Écrivez-nous sur WhatsApp : nous sommes disponibles 24 h/24, 7 j/7."
+  },
+  "homeGallery": {
+    "title": "Nos réalisations",
+    "intro": "Des tables dressées, des buffets généreux et des invités heureux.",
+    "link": "Voir toute la galerie"
   }
 }

@@ -6,6 +6,7 @@ export type ServiceVariant = { id: string; title: string; text: string; guests: 
 
 export type Service = {
   slug: "mariage" | "anniversaire" | "fetes";
+  photos: string[];
   icon: "heart" | "cake" | "party";
   title: string;
   intro: string;
@@ -18,6 +19,7 @@ export type Service = {
 const fr: Service[] = [
   {
     slug: "mariage",
+    photos: ["mariage-1", "mariage-2"],
     icon: "heart",
     title: "Mariages",
     intro:
@@ -67,6 +69,7 @@ const fr: Service[] = [
   },
   {
     slug: "anniversaire",
+    photos: ["anniversaire-1", "anniversaire-2"],
     icon: "cake",
     title: "Anniversaires",
     intro:
@@ -101,6 +104,7 @@ const fr: Service[] = [
   },
   {
     slug: "fetes",
+    photos: ["buffets-1", "buffets-2"],
     icon: "party",
     title: "Fêtes et cérémonies",
     intro:
@@ -150,6 +154,7 @@ const fr: Service[] = [
 const en: Service[] = [
   {
     slug: "mariage",
+    photos: ["mariage-1", "mariage-2"],
     icon: "heart",
     title: "Weddings",
     intro:
@@ -199,6 +204,7 @@ const en: Service[] = [
   },
   {
     slug: "anniversaire",
+    photos: ["anniversaire-1", "anniversaire-2"],
     icon: "cake",
     title: "Birthdays",
     intro:
@@ -227,6 +233,7 @@ const en: Service[] = [
   },
   {
     slug: "fetes",
+    photos: ["buffets-1", "buffets-2"],
     icon: "party",
     title: "Parties and ceremonies",
     intro:
