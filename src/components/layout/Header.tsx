@@ -15,6 +15,7 @@ export default function Header({ locale, dict }: Props) {
   const [open, setOpen] = useState(false);
 
   const links = [
+    { href: "", label: dict.nav.home },
     { href: "/services", label: dict.nav.services },
     { href: "/menus", label: dict.nav.menus },
     { href: "/yaourts", label: dict.nav.yogurts },
@@ -28,7 +29,8 @@ export default function Header({ locale, dict }: Props) {
     return `/${target}${rest ? `/${rest}` : ""}`;
   };
 
-  const isActive = (href: string) => pathname.startsWith(`/${locale}${href}`);
+  const isActive = (href: string) =>
+    href === "" ? pathname === `/${locale}` || pathname === `/${locale}/` : pathname.startsWith(`/${locale}${href}`);
 
   return (
     <header
@@ -40,7 +42,7 @@ export default function Header({ locale, dict }: Props) {
           <Logo />
         </Link>
 
-        <nav aria-label="Principal" className="hidden items-center gap-7 lg:flex">
+        <nav aria-label="Principal" className="hidden items-center gap-7 xl:flex">
           {links.map((l) => (
             <Link
               key={l.href}
@@ -78,7 +80,7 @@ export default function Header({ locale, dict }: Props) {
 
           <button
             type="button"
-            className="grid h-11 w-11 place-items-center rounded-lg lg:hidden"
+            className="grid h-11 w-11 place-items-center rounded-lg xl:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? dict.common.closeMenu : dict.common.openMenu}
@@ -90,7 +92,7 @@ export default function Header({ locale, dict }: Props) {
       </div>
 
       {open && (
-        <nav id="mobile-menu" aria-label="Mobile" className="border-t border-line bg-page px-5 pb-5 pt-2 lg:hidden">
+        <nav id="mobile-menu" aria-label="Mobile" className="border-t border-line bg-page px-5 pb-5 pt-2 xl:hidden">
           <ul>
             {links.map((l) => (
               <li key={l.href}>
