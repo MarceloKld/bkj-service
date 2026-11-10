@@ -58,8 +58,9 @@
     ]
   },
   "legal": {
-    "terms": "Conditions générales",
-    "privacy": "Politique de confidentialité"
+    "terms": "Conditions de réservation",
+    "privacy": "Politique de confidentialité",
+    "notices": "Mentions légales"
   },
   "notFound": {
     "title": "Page introuvable",

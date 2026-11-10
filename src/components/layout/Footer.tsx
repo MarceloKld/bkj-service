@@ -21,6 +21,7 @@ export default function Footer({ locale, dict }: Props) {
     { href: "/contact", label: dict.nav.contact },
     { href: "/legal/conditions", label: dict.legal.terms },
     { href: "/legal/confidentialite", label: dict.legal.privacy },
+    { href: "/legal/mentions", label: dict.legal.notices },
   ];
 
   const column = (title: string, items: { href: string; label: string }[]) => (

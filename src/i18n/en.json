@@ -58,8 +58,9 @@
     ]
   },
   "legal": {
-    "terms": "Terms and conditions",
-    "privacy": "Privacy policy"
+    "terms": "Booking conditions",
+    "privacy": "Privacy policy",
+    "notices": "Legal notice"
   },
   "notFound": {
     "title": "Page not found",

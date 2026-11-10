@@ -11,4 +11,12 @@ export const siteConfig = {
     // WhatsApp est le seul moyen de contact
     whatsappDisplay: "+243 810 341 104",
   },
+  // Les champs vides ne s'affichent pas dans les mentions legales
+  legal: {
+    lastUpdated: "2026-11-10",
+    director: "",
+    registration: "",
+    host: "",
+    developer: "marcelo.tech",
+  },
 };
