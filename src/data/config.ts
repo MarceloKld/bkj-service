@@ -5,6 +5,8 @@ export const siteConfig = {
   business: {
     name: "BKJ service",
     city: "Kinshasa",
+    district: "Cité Verte",
+    street: "1ère rue 10/345",
     address: "Cité Verte, 1ère rue 10/345, Kinshasa",
     // Recherche utilisee par le lien "Voir sur la carte"
     mapQuery: "Cité Verte, Kinshasa",
@@ -17,6 +19,6 @@ export const siteConfig = {
     director: "",
     registration: "",
     host: "",
-    developer: "marcelo.tech",
+    developer: "marcelo.dev",
   },
 };

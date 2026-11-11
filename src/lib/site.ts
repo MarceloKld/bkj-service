@@ -1,0 +1,2 @@
+// Adresse publique du site. A definir dans NEXT_PUBLIC_SITE_URL au moment de la mise en ligne.
+export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/+$/, "");

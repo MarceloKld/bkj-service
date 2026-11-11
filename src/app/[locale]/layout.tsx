@@ -4,6 +4,7 @@ import { Figtree, Fraunces } from "next/font/google";
 import { notFound } from "next/navigation";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
+import { siteUrl } from "@/lib/site";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import HomeSplash from "@/components/layout/HomeSplash";
@@ -14,6 +15,11 @@ const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", dis
 const figtree = Figtree({ subsets: ["latin"], variable: "--font-figtree", display: "swap" });
 
 type Params = { params: Promise<{ locale: string }> };
+
+const homeTitles = {
+  fr: "BKJ service, traiteur d'événements à Kinshasa",
+  en: "BKJ service, event catering in Kinshasa",
+};
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -34,8 +40,16 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   if (!isLocale(locale)) return {};
   const dict = getDictionary(locale);
   return {
-    title: { default: dict.meta.siteName, template: `%s | ${dict.meta.siteName}` },
+    metadataBase: new URL(siteUrl),
+    title: { default: homeTitles[locale], template: `%s | ${dict.meta.siteName}` },
     description: dict.meta.description,
+    applicationName: dict.meta.siteName,
+    openGraph: {
+      type: "website",
+      siteName: dict.meta.siteName,
+      locale: locale === "fr" ? "fr_FR" : "en_US",
+    },
+    twitter: { card: "summary_large_image" },
   };
 }
 

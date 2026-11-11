@@ -8,6 +8,7 @@ import Parallax from "@/components/motion/Parallax";
 import HeroAlbum from "@/components/sections/HeroAlbum";
 import ServicesPreview from "@/components/sections/ServicesPreview";
 import GalleryPreview from "@/components/sections/GalleryPreview";
+import BusinessJsonLd from "@/components/seo/BusinessJsonLd";
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -57,6 +58,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       <ServicesPreview locale={locale} dict={dict} />
       <GalleryPreview locale={locale} dict={dict} />
+      <BusinessJsonLd locale={locale} description={dict.meta.description} />
     </>
   );
 }
