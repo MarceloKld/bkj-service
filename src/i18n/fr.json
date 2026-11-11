@@ -217,5 +217,14 @@
     "title": "Nos réalisations",
     "intro": "Des tables dressées, des buffets généreux et des invités heureux.",
     "link": "Voir toute la galerie"
+  },
+  "pwa": {
+    "install": "Installer l'application",
+    "iosTitle": "Installer BKJ service sur iPhone",
+    "iosIntro": "Dans Safari, suivez ces trois étapes :",
+    "iosStep1": "Touchez le bouton Partager, en bas de l'écran (un carré avec une flèche vers le haut).",
+    "iosStep2": "Faites défiler et choisissez « Sur l'écran d'accueil ».",
+    "iosStep3": "Touchez « Ajouter » : l'icône BKJ service apparaît sur votre écran.",
+    "close": "Fermer"
   }
 }

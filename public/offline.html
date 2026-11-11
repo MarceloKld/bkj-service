@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BKJ service</title>
+<style>
+  :root { color-scheme: light dark; --page: #fff7f3; --ink: #2b1519; --muted: #6b4a50; --primary: #9e2447; --on-primary: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --page: #170d10; --ink: #f8ebe6; --muted: #c9aeb2; --primary: #ee6f8e; --on-primary: #1e0a11; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100dvh; display: grid; place-items: center; padding: 24px; background: var(--page); color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 28rem; text-align: center; }
+  svg { color: var(--primary); }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-size: 2rem; line-height: 1.15; margin: 1rem 0 0.5rem; }
+  p { color: var(--muted); line-height: 1.6; margin: 0 0 1.5rem; }
+  button { min-height: 44px; padding: 0 1.5rem; border: 0; border-radius: 0.75rem; background: var(--primary); color: var(--on-primary); font: inherit; font-weight: 600; cursor: pointer; }
+  button:active { transform: scale(0.97); }
+  :focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+  html[lang="fr"] [data-en], html[lang="en"] [data-fr] { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8.8a15 15 0 0 1 4.2-2.6M22 8.8A15 15 0 0 0 11 5M5 12.9a10 10 0 0 1 5.2-2.7M19 12.9a10 10 0 0 0-2-1.5M8.5 16.4a5 5 0 0 1 7 0M12 20h.01M2 2l20 20"/></svg>
+  <h1><span data-fr>Vous êtes hors connexion</span><span data-en>You are offline</span></h1>
+  <p>
+    <span data-fr>Cette page n'est pas disponible sans connexion. Reconnectez-vous, puis réessayez. Les pages que vous avez déjà consultées restent accessibles.</span>
+    <span data-en>This page is not available offline. Reconnect, then try again. Pages you have already visited remain available.</span>
+  </p>
+  <button type="button" onclick="location.reload()"><span data-fr>Réessayer</span><span data-en>Try again</span></button>
+</main>
+<script>
+  document.documentElement.lang = (navigator.language || "fr").toLowerCase().indexOf("en") === 0 ? "en" : "fr";
+</script>
+</body>
+</html>

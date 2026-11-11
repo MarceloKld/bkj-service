@@ -9,6 +9,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import HomeSplash from "@/components/layout/HomeSplash";
 import NetworkStatus from "@/components/network/NetworkStatus";
+import PwaRegister from "@/components/pwa/PwaRegister";
 import "../globals.css";
 
 const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", display: "swap" });
@@ -50,6 +51,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       locale: locale === "fr" ? "fr_FR" : "en_US",
     },
     twitter: { card: "summary_large_image" },
+    manifest: "/manifest.webmanifest",
+    appleWebApp: { capable: true, title: dict.meta.siteName, statusBarStyle: "default" },
   };
 }
 
@@ -72,6 +75,7 @@ export default async function LocaleLayout({
           {dict.common.skipToContent}
         </a>
         <NetworkStatus labels={dict.network} />
+        <PwaRegister locale={locale} />
         <Header locale={locale} dict={dict} />
         <main id="main">{children}</main>
         <Footer locale={locale} dict={dict} />

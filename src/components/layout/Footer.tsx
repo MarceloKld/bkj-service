@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import Logo from "./Logo";
+import InstallApp from "./InstallApp";
 import { siteConfig } from "@/data/config";
 import CurrentYear from "./CurrentYear";
 import FloatingQuote from "./FloatingQuote";
@@ -53,6 +54,9 @@ export default function Footer({ locale, dict }: Props) {
           <p className="mt-3 max-w-xs text-muted">{dict.footer.tagline}</p>
           <p className="mt-4 text-sm text-muted">{siteConfig.business.address}</p>
           <p className="text-sm text-muted">WhatsApp : {siteConfig.business.whatsappDisplay} · {dict.contactPage.availabilityShort}</p>
+          <div className="mt-3">
+            <InstallApp t={dict.pwa} />
+          </div>
         </div>
         {column(dict.footer.explore, explore)}
         {column(dict.footer.info, info)}
