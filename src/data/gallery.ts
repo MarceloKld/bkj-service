@@ -8,9 +8,9 @@ const EXT = "webp";
 
 // Nombre de photos par categorie : modifier si vous en ajoutez ou retirez
 const sets: { category: GalleryCategory; count: number }[] = [
-  { category: "mariage", count: 7 },
+  { category: "mariage", count: 6 },
   { category: "anniversaire", count: 5 },
-  { category: "buffets", count: 6 },
+  { category: "buffets", count: 5 },
   { category: "yaourts", count: 4 },
 ];
 
